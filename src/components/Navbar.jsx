@@ -1,5 +1,5 @@
 
-const Navbar = () => {
+const Navbar = ({ setOpenMenu }) => {
   return (
     <nav className="absolute top-0 py-10 md:px-24 px-5 z-10 left-0 w-full">
         <div className="container mx-auto w-full flex justify-between items-center">
@@ -11,7 +11,7 @@ const Navbar = () => {
               <li className="hover:border-b-2 hover:border-white cursor-pointer">Products</li>
               <li className="hover:border-b-2 hover:border-white cursor-pointer">Support</li>
           </ul>
-          <img className="md:hidden block" src="/images/icon-hamburger.svg" alt="hamburger" />
+          <img onClick={() => setOpenMenu(true)} className="md:hidden block" src="/images/icon-hamburger.svg" alt="hamburger" />
         </div>
     </nav>
   )
